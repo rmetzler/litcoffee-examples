@@ -1,0 +1,1 @@
+This is a project aimed at teaching [Literate CoffeeScript](http://coffeescript.org/#literate) by providing small examples.
