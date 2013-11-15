@@ -1,14 +1,11 @@
-#! /usr/bin/env coffee
-
-
-# fib.litcoffee
+## fib.litcoffee
 
 This program prints all Fibonacci numbers. It is written in Literate CoffeeScript.
 
 Fibonacci is a common example for teaching recursive functions and complexity theory.
 
 
-## What are the Fibonacci numbers?
+### What are the Fibonacci numbers?
 
 Every Fibonacci Number (`fib(n)`) is built by the following rules.
 
@@ -37,26 +34,22 @@ As a recursive CoffeeScriptIn a recursive style this would be written like this:
     fib(4) # => fib(3) + fib(2) # => 2 + 1 # => 3
     fib(5) # => fib(4) + fib(3) # => 3 + 2 # => 5
 
-# Complexity Theory
+### Complexity Theory
 
-For bigger n the The recursion step is going to spend more and more time for bigger
-
-We use a memory structure to cache and speed up the computation.
+For bigger n the recursion step is going to require more and more time.
+To improve the time requirement and speed up computation we can use a
+hash as computation cache.
 
     cache =
       1: 1
       2: 1
-
-
-Fibonacci is a recursive function.
 
     fib = (n) ->
       unless cache[n]
         cache[n] = fib(n-1) + fib(n-2)
       cache[n]
 
-
     for n in [1..100]
       console.log "fib(#{n}) => #{fib(n)}" 
 
-    #console.log mem
+
