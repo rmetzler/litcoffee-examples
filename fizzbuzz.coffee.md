@@ -10,9 +10,9 @@ This is the fizzbuzz test in literate CoffeeScript.
 
 The FizzBuzz test should print:
 
-- 'fizz' for every number dividable by 3,
-- 'buzz' for every number dividable by 5,
-- 'fizzbuzz' if the number is dividable by 3 and 5
+- 'fizz' for every number divisible by 3,
+- 'buzz' for every number divisible by 5,
+- 'fizzbuzz' if the number is divisible by 3 and 5
 - else: just print the number.
 
 ## Fun Facts
